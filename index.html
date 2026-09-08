@@ -316,6 +316,22 @@
                 padding-left: 21px;
                 color: var(--text);
             }
+
+            .video-player {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                aspect-ratio: 16 / 9;
+                background-color: #020617;
+                border-radius: 12px;
+            }
+
+            .video-player iframe {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
             .flow {
                 display: grid;
                 grid-template-columns: repeat(6,minmax(0,1fr));
@@ -1473,11 +1489,6 @@
                         <p>인증번호 생성·메일 발송·일치 여부 검증 결과를
                             <code>EMAIL_AUTH</code>에 기록하고, 인증이 완료된 이메일만 회원가입을 진행할 수 있도록 프론트엔드와 백엔드를 연동했습니다.</p>
                     </article>
-                    <article class="card">
-                        <h3>WebSocket 1:1 실시간 상담</h3>
-                        <p>사용자별 채팅방을 생성하고 WebSocket으로 관리자와 메시지를 주고받도록 구현했습니다. 메시지를 DB에 저장하여 로그아웃 후 다시
-                            로그인해도 이전 상담 내용을 불러오도록 구성했습니다.</p>
-                    </article>
                 </div>
             </div>
         </section>
@@ -2034,7 +2045,14 @@
                     <article class="video-card">
                         <h3>SWEETSCOOP 키오스크 주문 프로세스 구현 시연</h3>
                         <p>키오스크 홈부터 주문 유형, 사이즈, 컵, 메뉴 선택 및 결제 단계까지의 사용자 흐름입니다.</p>
-                        <video controls="controls" preload="metadata"><source src="./resources/videos/SweetScoop_시연영상.mp4" type="video/mp4">현재 브라우저에서는 영상을 재생할 수 없습니다.</video>
+                        <div class="video-player">
+                            <iframe
+                                src="https://www.youtube.com/embed/Utpi0jhbLYs"
+                                title="SWEETSCOOP 키오스크 주문 프로세스 구현 시연"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen="allowfullscreen"></iframe>
+                        </div>
                     </article>
 
                 </div>
@@ -2239,7 +2257,14 @@ loginresponse response =
                     <article class="video-card">
                         <h3>2차 보안 프로젝트 시연 영상</h3>
                         <p>보안 취약점 공격 및 방어 시연</p>
-                        <video controls="controls" preload="metadata"><source src="./resources/videos/sweetscoop 모의공격 시연.mp4" type="video/mp4">현재 브라우저에서는 영상을 재생할 수 없습니다.</video>
+                        <div class="video-player">
+                            <iframe
+                                src="https://www.youtube.com/embed/4lu8g_gjGtA"
+                                title="SWEETSCOOP 키오스크 주문 프로세스 구현 시연"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen="allowfullscreen"></iframe>
+                        </div>
                     </article>
                 </div>
             </section>
